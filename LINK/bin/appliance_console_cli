@@ -12,7 +12,7 @@ ENV['BUNDLE_GEMFILE'] ||= "#{ROOT}/vmdb/Gemfile"
 require 'bundler'
 Bundler.setup
 
-$LOAD_PATH.push("#{ROOT}/lib")
+$LOAD_PATH.push("#{ROOT}/vmdb/gems/pending")
 
 require 'appliance_console/cli'
 
