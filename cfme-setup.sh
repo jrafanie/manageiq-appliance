@@ -4,6 +4,12 @@
 pushd /var/www/miq/vmdb
   # rails compile tasks loads environment which needs above shared objects
   # There is no database.yml. Bogus database parameters appeases rails.
+
+echo "XXX: printing environment variables before rake evm:compile_assets"
+set
+
+echo "XXX: unsetting DEBUG before rake evm:compile_assets"
+  unset DEBUG
   RAILS_ENV=production rake evm:compile_assets
 popd
 
