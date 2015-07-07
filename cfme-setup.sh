@@ -7,9 +7,6 @@ pushd /var/www/miq/vmdb
 
 echo "XXX: printing environment variables before rake evm:compile_assets"
 set
-
-echo "XXX: unsetting DEBUG before rake evm:compile_assets"
-  unset DEBUG
   RAILS_ENV=production rake evm:compile_assets
 popd
 
